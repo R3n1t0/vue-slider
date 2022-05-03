@@ -59,7 +59,9 @@ const app = new Vue({
             console.log(counterSlide);
         },
 
-        setCounterSlide(){
+        changeImage(index){
+            
+            this.counterSlide = index;
 
         }
     },
