@@ -68,6 +68,7 @@ const app = new Vue({
 
 
     mounted(){
+
         this.counterSlide = 0;
     }
 
