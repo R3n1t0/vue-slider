@@ -35,6 +35,7 @@ const app = new Vue({
         ],
 
         counterSlide: 0,
+        autoScroll: null
     },
 
  
@@ -63,13 +64,35 @@ const app = new Vue({
             
             this.counterSlide = index;
 
+        },
+
+        mouseOver(){
+
+
+            clearInterval(this.autoScroll);
+            this.autoScroll = null;
+            
+        },
+
+        mouseOut(){
+            
+            this.startAutoScroll();
+
+        },
+
+        startAutoScroll(){
+            this.autoScroll = setInterval(() =>{
+                this.nextSlide();
+            },1000)
         }
     },
 
 
     mounted(){
 
-        this.counterSlide = 0;
+        this.startAutoScroll();
+
+        
     }
 
 });
