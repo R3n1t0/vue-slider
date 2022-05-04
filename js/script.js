@@ -35,6 +35,7 @@ const app = new Vue({
         ],
 
         counterSlide: 0,
+
         autoScroll: null
     },
 
@@ -50,7 +51,6 @@ const app = new Vue({
 
             console.log(counterSlide);
         },
-
         prevSlide(){
             this.counterSlide --;
             if (this.counterSlide < 0){
@@ -59,13 +59,11 @@ const app = new Vue({
 
             console.log(counterSlide);
         },
-
         changeImage(index){
             
             this.counterSlide = index;
 
         },
-
         mouseOver(){
 
 
@@ -73,13 +71,11 @@ const app = new Vue({
             this.autoScroll = null;
             
         },
-
         mouseOut(){
             
             this.startAutoScroll();
 
         },
-
         startAutoScroll(){
             this.autoScroll = setInterval(() =>{
                 this.nextSlide();
@@ -91,8 +87,7 @@ const app = new Vue({
     mounted(){
 
         this.startAutoScroll();
-
-        
+    
     }
 
 });
